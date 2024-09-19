@@ -21,10 +21,10 @@ namespace CloudProjectMicro.Controllers
         public ActionResult<List<ProfileDto>> SendUserProfileInformation(string searchPhrase)
         {
             var users = database.Profiles
-                .Where(u => u.UserName.Contains(searchPhrase))
+                .Where(u => u.Username.Contains(searchPhrase))
                 .Select(u => new ProfileDto
                 {
-                    Username = u.UserName,
+                    Username = u.Username,
                     Email = u.Email,
                     Address = u.Address
                 })

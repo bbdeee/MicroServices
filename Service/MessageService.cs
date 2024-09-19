@@ -1,5 +1,6 @@
 using System.Text;
 using System.Text.Json;
+using MicroServicesProject.Data;
 using MicroServicesProject.Models;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -42,10 +43,10 @@ public class MessageService : IHostedService
 
     void ListenForProfileCreations()
     {
-        channel.ExchangeDeclare(exchange: "create-profile", type: ExchangeType.Fanout);
+        channel.ExchangeDeclare(exchange: "create-user", type: ExchangeType.Fanout);
 
-        var queueName = channel.QueueDeclare("profile-queue", true, false, false);
-        channel.QueueBind(queue: queueName, exchange: "create-profile", routingKey: string.Empty);
+        var queueName = channel.QueueDeclare("user-queue", true, false, false);
+        channel.QueueBind(queue: queueName, exchange: "create-user", routingKey: string.Empty);
 
         var consumer = new EventingBasicConsumer(channel);
         consumer.Received += (model, ea) =>
@@ -56,13 +57,14 @@ public class MessageService : IHostedService
             try
             {
                 var profile = JsonSerializer.Deserialize<Profile>(json);
-                Console.WriteLine("Received profile for user: " + profile.UserName);
+                Console.WriteLine("Received profile for user: " + profile.Username);
 
                 using (var scope = provider.CreateScope())
                 {
                     var profileSaver = scope.ServiceProvider.GetRequiredService<ProfileService>();
                     profileSaver.SaveProfile(profile);  
                 }
+                
             }
             catch (Exception e)
             {

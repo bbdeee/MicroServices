@@ -10,10 +10,12 @@ namespace CloudProjectMicro.Controllers
     public class ProfileController : ControllerBase
     {
         private readonly ProfileContext database;
+        private readonly MessageService messageService;
 
-        public ProfileController(ProfileContext context)
+        public ProfileController(ProfileContext context, MessageService messageservice)
         {
             this.database = context;
+            this.messageService = messageservice;
         }
 
         [HttpGet]
@@ -32,6 +34,7 @@ namespace CloudProjectMicro.Controllers
 
             if (users.Any())
             {
+                messageService.SendLoggingActions($"Search for '{searchPhrase}' found {users.Count} users.");
                 return Ok(users);
             }
 

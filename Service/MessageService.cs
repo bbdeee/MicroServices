@@ -74,4 +74,9 @@ public class MessageService : IHostedService
 
         channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
     }
+    public void SendLoggingActions(string action)
+    {
+        var message = Encoding.UTF8.GetBytes(action);
+        channel.BasicPublish("logging", string.Empty, null, message);
+    }
 }

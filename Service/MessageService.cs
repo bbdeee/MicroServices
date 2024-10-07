@@ -14,17 +14,15 @@ public class MessageService : IHostedService
 
     public MessageService(IServiceProvider provider)
     {
-        this.provider = provider;
-        this.httpClient = new HttpClient {
-            BaseAddress = new Uri("http://localhost:5117")
-        };
+        this.provider = provider; 
     }
 
     public void Connect()
     {
-        var factory = new ConnectionFactory { HostName = "localhost" };
+        var factory = new ConnectionFactory { HostName = "10.104.114.61", Port = 5672 };
         connection = factory.CreateConnection();
         channel = connection.CreateModel();
+        channel.ExchangeDeclare("logging", ExchangeType.Fanout);
     }
 
     public Task StartAsync(CancellationToken cancellationToken)

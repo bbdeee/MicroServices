@@ -25,5 +25,6 @@ public class ProfileService
 
         context.Profiles.Add(user);
         context.SaveChanges();
+        System.Console.WriteLine("User saved");
     }
 }

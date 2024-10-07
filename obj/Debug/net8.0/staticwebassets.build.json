@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "GiZCbpMUb/gXnwtoVgs9kQCGHK2HOcf4Kr6FUeJNLIg=",
-  "Source": "MicroServicesProject",
-  "BasePath": "_content/MicroServicesProject",
+  "Hash": "RSSXzbRYWziS36nWLZrJSeABo6f5UoYo4irKPZ7gIFc=",
+  "Source": "profile-microservice",
+  "BasePath": "_content/profile-microservice",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

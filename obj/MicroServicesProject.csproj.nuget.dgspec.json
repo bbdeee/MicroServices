@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brian\\OneDrive\\Desktop\\CloudProject\\MicroServices\\MicroServicesProject.csproj": {}
+    "C:\\Users\\ljung\\OneDrive\\Skrivbord\\SkolaCsharp\\BrianMicroservice\\MicroServicesProject\\MicroServicesProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brian\\OneDrive\\Desktop\\CloudProject\\MicroServices\\MicroServicesProject.csproj": {
+    "C:\\Users\\ljung\\OneDrive\\Skrivbord\\SkolaCsharp\\BrianMicroservice\\MicroServicesProject\\MicroServicesProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brian\\OneDrive\\Desktop\\CloudProject\\MicroServices\\MicroServicesProject.csproj",
+        "projectUniqueName": "C:\\Users\\ljung\\OneDrive\\Skrivbord\\SkolaCsharp\\BrianMicroservice\\MicroServicesProject\\MicroServicesProject.csproj",
         "projectName": "MicroServicesProject",
-        "projectPath": "C:\\Users\\brian\\OneDrive\\Desktop\\CloudProject\\MicroServices\\MicroServicesProject.csproj",
-        "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brian\\OneDrive\\Desktop\\CloudProject\\MicroServices\\obj\\",
+        "projectPath": "C:\\Users\\ljung\\OneDrive\\Skrivbord\\SkolaCsharp\\BrianMicroservice\\MicroServicesProject\\MicroServicesProject.csproj",
+        "packagesPath": "C:\\Users\\ljung\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ljung\\OneDrive\\Skrivbord\\SkolaCsharp\\BrianMicroservice\\MicroServicesProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ljung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
